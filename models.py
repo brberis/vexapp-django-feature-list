@@ -15,7 +15,7 @@ class FeaturesManager(TranslatableManager):
 
 class FeatureList(TranslatableModel):
 
-    featured_image = FilerImageField(null=True, blank=True, on_delete=models.CASCADE,related_name="main_feature_image")
+    featured_image = FilerImageField(on_delete=models.CASCADE, null=True, blank=True,related_name="main_feature_image")
     active = models.BooleanField(_('Activa'), default=True)
     translations = TranslatedFields(
     title = models.CharField(max_length=150, verbose_name=_('Titles'), null=True, blank=True),
